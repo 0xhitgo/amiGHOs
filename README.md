@@ -1,3 +1,14 @@
+# amiGHOs
+
+**amiGHOs** is a decentralized application (dApp) that provides users a seamless way to track, share, and settle expenses among friends
+
+## Features
+
+- **Create Groups**: Easily set up groups for shared expenses.
+- **Add Expenses**: Log expenses and automatically calculate each person's share.
+- **Settle Up**: Use Ethereum or stablecoins to settle balances with a single click.
+- **Transparent Records**: All transactions are recorded on the blockchain for complete transparency.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
