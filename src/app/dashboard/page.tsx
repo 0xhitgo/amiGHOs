@@ -105,7 +105,9 @@ export default function Component() {
               <CardTitle>Group Expenses</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-2">
-              <div className="text-sm font-semibold">Dinner at Mehrangarh Fort</div>
+              <div className="text-sm font-semibold">
+                Dinner at Mehrangarh Fort
+              </div>
               <div className="flex items-center gap-4 text-sm">
                 <div className="flex items-center gap-1">
                   <CalendarIcon className="w-4 h-4" />
@@ -136,7 +138,7 @@ export default function Component() {
   );
 }
 
-function CalendarIcon(props) {
+function CalendarIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -158,7 +160,7 @@ function CalendarIcon(props) {
   );
 }
 
-function DollarSignIcon(props) {
+function DollarSignIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -178,7 +180,7 @@ function DollarSignIcon(props) {
   );
 }
 
-function LineChart(props) {
+function LineChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveLine
@@ -251,7 +253,7 @@ function LineChart(props) {
   );
 }
 
-function UserIcon(props) {
+function UserIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
