@@ -1,19 +1,24 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/uNvIqSZ1mUC
- */
+"use client";
 import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 
-export default function Component() {
+export default function Landing() {
+  const router = useRouter();
   return (
     <div className="bg-white text-gray-900">
       <nav className="flex justify-between items-center py-4 px-8 bg-[#f8f9fa]">
-        <h1 className="text-xl font-semibold">Manage Group Expenses.</h1>
-        <Button className="bg-purple-300 text-white">Join Now!</Button>
+        <h1 className="text-xl font-semibold">Settle Smart</h1>
+        {/* <ConnectKitButton /> */}
+        <Button
+          onClick={() => router.push("/dashboard", { scroll: false })}
+          className="bg-[#BBBDF6] text-white"
+        >
+          Join Now!
+        </Button>
       </nav>
       <header className="flex flex-col items-center justify-center py-12 bg-blue-100">
-        <h2 className="text-6xl font-bold text-[#61628a]">AMiGHOs</h2>
+        <h2 className="text-6xl font-bold text-[#6e7093]">AmiGHOs</h2>
         <img
           alt="Decorative image"
           className="mt-4"
@@ -27,43 +32,49 @@ export default function Component() {
         />
       </header>
       <section className="px-8 py-12">
-        <h3 className="text-2xl font-semibold mb-4">What is AMiGHOs?</h3>
-        <p className="text-lg mb-8">
-          {/* AMiGHOs is a heightened experience of financial camaraderie. Track, split, and pool funds for group outings
-           and larger expenses, all whilst smartly accruing interest on due amounts. */}
-          Imagine a universe where you and your buddies tackle the gnarliest of
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-2xl font-semibold mb-4">What is AMiGHOs?</h3>
+          <p className="text-lg mb-8">
+            AMiGHOs is a heightened experience of financial camaraderie. Track,
+            split, and pool funds for group outings and larger expenses, all
+            whilst smartly accruing interest on due amounts.
+            {/* Imagine a universe where you and your buddies tackle the gnarliest of
           bills, powered by the invincible blockchain. Welcome to AmiGHOs – it’s
-          that universe.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card className="bg-[#BBBDF6] text-white">
-            <CardContent>
-              <PiggyBankIcon className="text-white h-12 w-12" />
-              <h4 className="text-lg font-medium mt-2">Smart Interest</h4>
-              <p className="text-sm">Grow money even while owing</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#BBBDF6] text-white">
-            <CardContent>
-              <CloudSunIcon className="text-white h-12 w-12" />
-              <h4 className="text-lg font-medium mt-2">Pre-Pool Funds</h4>
-              <p className="text-sm">No more waiting for sunnier days</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#BBBDF6] text-white">
-            <CardContent>
-              <CalculatorIcon className="text-white h-12 w-12" />
-              <h4 className="text-lg font-medium mt-2">Ease Calculations</h4>
-              <p className="text-sm">Automatic splitting makes life easy</p>
-            </CardContent>
-          </Card>
+          that universe. */}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Card className="bg-[#BBBDF6] text-white">
+              <CardContent>
+                <PiggyBankIcon className="text-white h-12 w-12 mt-2" />
+                <h4 className="text-lg font-medium mt-2">Smart Interest</h4>
+                <p className="text-sm">Grow money even while owing</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#BBBDF6] text-white">
+              <CardContent>
+                <CloudSunIcon className="text-white h-12 w-12 mt-2" />
+                <h4 className="text-lg font-medium mt-2">Pre-Pool Funds</h4>
+                <p className="text-sm">No more waiting for sunnier days</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#BBBDF6] text-white">
+              <CardContent>
+                <CalculatorIcon className="text-white h-12 w-12 mt-2" />
+                <h4 className="text-lg font-medium mt-2">Ease Calculations</h4>
+                <p className="text-sm">Automatic splitting makes life easy</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
+      </section>
+      <section>
+        <Queries />
       </section>
     </div>
   );
 }
 
-function CalculatorIcon(props) {
+function CalculatorIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -91,7 +102,7 @@ function CalculatorIcon(props) {
   );
 }
 
-function CloudSunIcon(props) {
+function CloudSunIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -115,7 +126,7 @@ function CloudSunIcon(props) {
   );
 }
 
-function PiggyBankIcon(props) {
+function PiggyBankIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -133,5 +144,37 @@ function PiggyBankIcon(props) {
       <path d="M2 9v1c0 1.1.9 2 2 2h1" />
       <path d="M16 11h0" />
     </svg>
+  );
+}
+
+function Queries() {
+  return (
+    <div className="bg-white py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-extrabold text-gray-900 mb-8">
+          Queries, Answered
+        </h2>
+        <dl className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div>
+            <dt className="text-lg leading-6 font-medium text-gray-900">
+              How secure and private is AmiGHOS?
+            </dt>
+            <dd className="mt-2 text-base text-gray-500">
+              As secure as a blockchain fortress can be, and as private as your
+              secret diary. You&apos;re in safe hands!
+            </dd>
+          </div>
+          <div>
+            <dt className="text-lg leading-6 font-medium text-gray-900">
+              Why should I use AmiGHOS?
+            </dt>
+            <dd className="mt-2 text-base text-gray-500">
+              Because why not? Track, manage, and accrue; a complete finance
+              solution right here!
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
   );
 }
