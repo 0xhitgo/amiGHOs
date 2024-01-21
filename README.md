@@ -2,6 +2,10 @@
 
 **amiGHOs** is a decentralized application (dApp) that provides users a seamless way to track, share, and settle expenses among friends
 
+![4653cfa9-ef4a-416c-921b-4e5523da97ad](https://github.com/0xhitgo/amiGHOs/assets/123029340/c83164a4-887e-4820-b7cc-225d1cd0baa9)
+
+![6fea9db9-201e-480b-ba4e-c5c2171b1d94](https://github.com/0xhitgo/amiGHOs/assets/123029340/7c2ea36a-cdb3-450d-92fd-3ed21d069561)
+
 ## Features
 
 - **Create Groups**: Easily set up groups for shared expenses.
